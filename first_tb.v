@@ -1,0 +1,17 @@
+module first_tb;
+	reg A, B, C, D, E, F;
+	wire Y;
+	
+	first_ckt ckt_instance(A, B, C, D, E, F, Y);
+	initial
+		begin
+			$dumpfile("first.vcd");
+			$dumpvars(0, first_tb);
+			$monitor($time, " A = %b, B = %b, C = %b, D = %b, E = %b, F = %b, Y = %b", A, B, C, D, E, F, Y);
+			#5 A = 1; B = 0; C = 0; D = 1; E = 0; F = 0;
+			#5 A = 0; B = 0; C = 1; D = 1; E = 0; F = 0;
+			#5 A = 1; C = 0;
+			#5 F = 1;
+			#5 $finish;
+		end
+endmodule

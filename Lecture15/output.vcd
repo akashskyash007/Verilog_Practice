@@ -1,0 +1,41 @@
+$date
+	Tue May  3 12:06:25 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module incomplete_state_spec_tb $end
+$var wire 2 ! flag [0:1] $end
+$var reg 2 " curr_state [0:1] $end
+$scope module DUT $end
+$var wire 2 # curr_state [0:1] $end
+$var reg 2 $ flag [0:1] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10 $
+b0 #
+b0 "
+b10 !
+$end
+#5
+b10 !
+b10 $
+b1 "
+b1 #
+#10
+b1 !
+b1 $
+b10 "
+b10 #
+#15
+b0 !
+b0 $
+b11 "
+b11 #
+#20
